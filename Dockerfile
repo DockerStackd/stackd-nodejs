@@ -8,6 +8,10 @@ RUN apk upgrade --update && apk add nodejs && \
     /usr/share/man /tmp/* /var/cache/apk/* /root/.npm /root/.node-gyp /root/.gnupg \
     /usr/lib/node_modules/npm/man /usr/lib/node_modules/npm/doc /usr/lib/node_modules/npm/html
 
+# Create user www-data
+RUN addgroup -g 82 -S www-data && \
+	adduser -u 82 -D -S -G www-data www-data
+
 # Create work dir
 RUN mkdir -p /var/www/html && \
     chown -R www-data:www-data /var/www
