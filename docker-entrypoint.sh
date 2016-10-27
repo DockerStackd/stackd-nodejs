@@ -4,4 +4,8 @@ set -eo pipefail
 
 npm install
 
-exec npm run dev
+if [ -n "$EXEC_CMD" ]; then
+  exec ${EXEC_CMD}
+else
+  exec npm run dev
+fi
