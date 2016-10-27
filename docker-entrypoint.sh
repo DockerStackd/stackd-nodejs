@@ -2,4 +2,4 @@
 
 set -eo pipefail
 
-exec ${START_CMD}
+exec npm run dev
