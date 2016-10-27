@@ -1,6 +1,5 @@
-
 #!/bin/sh
 
 set -eo pipefail
 
-exec npm run dev
+exec ${START_CMD}
