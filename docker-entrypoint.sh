@@ -7,5 +7,5 @@ npm install
 if [ -n "$EXEC_CMD" ]; then
   exec ${EXEC_CMD}
 else
-  exec npm run dev
+  exec npm start
 fi
