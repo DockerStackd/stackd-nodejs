@@ -1,6 +1,7 @@
 FROM alpine:3.4
 
 RUN apk upgrade --update && apk add nodejs && \
+  npm install -g npm && \
   apk del curl make gcc g++ python linux-headers paxctl gnupg libgcc libstdc++ && \
 
   rm -rf /etc/ssl /SHASUMS256.txt.asc /usr/include \
