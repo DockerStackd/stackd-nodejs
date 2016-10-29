@@ -1,5 +1,5 @@
 FROM alpine:3.4
-MAINTAINER Alan Bondarchuk "imacoda@gmail.com"
+MAINTAINER Alan Bondarchuk <imacoda@gmail.com>
 
 RUN apk upgrade --update && apk add nodejs && \
   npm install -g npm && \
